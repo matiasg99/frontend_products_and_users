@@ -1,3 +1,54 @@
+# Frontend Products and Users
+
+Este proyecto es una aplicación web desarrollada con React que permite la gestión de productos y usuarios. Incluye funcionalidades CRUD (Crear, Leer, Actualizar, Eliminar) para ambos recursos y la posibilidad de exportar los productos a PDF.
+
+## Funcionalidades principales
+
+- Listado, creación, edición y eliminación de productos.
+- Listado, creación, edición y eliminación de usuarios.
+- Exportación de la lista de productos a PDF.
+- Interfaz moderna utilizando React Bootstrap.
+
+## Requisitos previos
+
+- Node.js (recomendado v16 o superior)
+- npm o yarn
+
+## Instalación y ejecución
+
+1. Clona el repositorio o descarga el código fuente.
+2. Abre una terminal en la carpeta del proyecto.
+3. Instala las dependencias:
+
+   ```sh
+   npm install
+   # o
+   yarn install
+   ```
+
+4. Inicia la aplicación en modo desarrollo:
+
+   ```sh
+   npm start
+   # o
+   yarn start
+   ```
+
+5. Accede a la aplicación en tu navegador en [http://localhost:3000](http://localhost:3000)
+
+## Estructura principal
+
+- `src/components/ProductosCRUD.jsx`: Gestión de productos.
+- `src/components/UsuariosCRUD.jsx`: Gestión de usuarios.
+- `src/components/Tabs.jsx`: Navegación entre productos y usuarios.
+
+## Notas
+
+- Asegúrate de tener corriendo el backend correspondiente en `/api/productos` y `/api/usuarios` para que la app funcione correctamente.
+- Puedes modificar o extender las funcionalidades según tus necesidades.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

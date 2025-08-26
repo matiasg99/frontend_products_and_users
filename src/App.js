@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Registro from "./pages/Registro";
 import ProductosCRUD from "./components/ProductosCRUD";
 import UsuariosCRUD from "./components/UsuariosCRUD";
+import { useAuth } from "./context/AuthContext";
+import { Navigate } from "react-router-dom";
 
 export default function App() {
   return (
@@ -52,9 +54,6 @@ export default function App() {
   );
 }
 
-// Redirección simple para la raíz
-import { useAuth } from "./context/AuthContext";
-import { Navigate } from "react-router-dom";
 function PublicOrPrivateHome() {
   const { token, loading } = useAuth();
   if (loading) return null;

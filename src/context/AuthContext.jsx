@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 const AuthContext = createContext(null);
 export const useAuth = () => useContext(AuthContext);
@@ -82,11 +82,11 @@ export default function AuthProvider({ children }) {
   };
 
   const isAdmin = user?.rol === "admin";
-  const hasRole = (role) => user?.rol === role;
+  const hasRole = useCallback((role) => user?.rol === role, [user]);
 
   const value = useMemo(
     () => ({ token, user, isAdmin, hasRole, login, logout, loading }),
-    [token, user, loading]
+    [token, user, loading, isAdmin, hasRole]
   );
 
   return (
